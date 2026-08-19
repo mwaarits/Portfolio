@@ -103,7 +103,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               onClick={() => onSelectProject(project)}
               className="bg-neutral-950/90 border border-white/10 hover:border-white/50 rounded-xl overflow-hidden flex flex-col justify-between group hover:bg-neutral-900/60 transition-all duration-300 shadow-lg relative cursor-pointer"
             >
-              {/* Top Image Preview with High-Contrast Monochrome */}
+              {/* Top Image Preview */}
               <div className="relative aspect-video w-full overflow-hidden bg-neutral-900 border-b border-white/10">
                 <img
                   src={project.image}
@@ -111,7 +111,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = '/img/helmet.png';
                   }}
-                  className="w-full h-full object-cover object-center monochrome-img group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
                 
                 {/* Category Badge */}

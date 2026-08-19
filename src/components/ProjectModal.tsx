@@ -84,7 +84,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = '/img/helmet.png';
                 }}
-                className="w-full h-full object-cover monochrome-img"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
