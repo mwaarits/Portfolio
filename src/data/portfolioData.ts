@@ -64,7 +64,7 @@ export const PROJECTS_DATA: Project[] = [
     type: 'cloud',
     categoryLabel: 'CLOUD & NETWORK SECURITY',
     url: 'https://github.com/mwaarits',
-    image: '/img/NowYouSeeMe.png',
+    image: '/img/project-PQC.png',
     problemStatement: 'Conventional public-key exchange algorithms (such as Diffie-Hellman and standard RSA) are vulnerable to future quantum computing decryption ("Harvest Now, Decrypt Later" threats) and lack decentralized mesh resilience.',
     solutionContext: 'Led a 5-person team across 2 sprints in Jira to architect and deploy a robust VPN mesh network. Administered Azure VPS instances with strict network security rules and configured WireGuard tunnels integrated with Rosenpass post-quantum key exchange (ML-KEM-1024).',
     resultsMetrics: [
@@ -84,7 +84,7 @@ export const PROJECTS_DATA: Project[] = [
     type: 'cloud',
     categoryLabel: 'CLOUD & AI PLATFORM',
     url: 'https://github.com/mwaarits',
-    image: '/img/Binary Intelligent.png',
+    image: '/img/project-RAG.png',
     problemStatement: 'Knowledge-base document query applications often suffer from LLM hallucinations, poor data retrieval precision, and insecure cloud deployments lacking multi-tenant data isolation.',
     solutionContext: 'Engineered a full-stack RAG document Q&A app leveraging Gemini embeddings, ChromaDB, and hybrid BM25 vector search with strict per-user data isolation. Containerized with Dockerfile using a non-root runtime user and provisioned Azure Container Apps, private VNet, and Azure Files via Terraform.',
     resultsMetrics: [
@@ -104,7 +104,7 @@ export const PROJECTS_DATA: Project[] = [
     type: 'dev',
     categoryLabel: 'FULL-STACK & CLOUD',
     url: 'https://github.com/mwaarits',
-    image: '/img/VSCode.png',
+    image: '/img/project-Bugchain.png',
     problemStatement: 'Security bounty programs require transparent, decentralized escrow handling combined with a secure, highly responsive cloud infrastructure for indexing on-chain bounty events.',
     solutionContext: 'Built and deployed a full-stack escrow platform (Hono/Node, React, viem) to Azure App Service with GitHub Actions CI/CD, indexing on-chain bounty events in real time. Provisioned Azure App Service and managed PostgreSQL in a private VNet with Key Vault-backed secrets and custom Azure DNS with TLS certificates.',
     resultsMetrics: [
@@ -124,7 +124,7 @@ export const PROJECTS_DATA: Project[] = [
     type: 'qa',
     categoryLabel: 'QA & TEST AUTOMATION',
     url: 'https://github.com/mwaarits/QA-Portofolio',
-    image: '/img/octopus.png',
+    image: '/img/project-QA-Portfolio.png',
     problemStatement: 'Manual regression testing across complex web applications leads to deployment delays, untracked edge-case defects, and unverified API endpoint performance under load.',
     solutionContext: 'Constructed a comprehensive testing suite combining Cypress for automated end-to-end browser journeys, Postman test scripts automated via Newman CLI for REST API validation, and JMeter test suites for concurrency and performance benchmarking.',
     resultsMetrics: [
@@ -144,7 +144,7 @@ export const PROJECTS_DATA: Project[] = [
     type: 'dev',
     categoryLabel: 'FULL-STACK & SYSTEMS',
     url: 'https://github.com/mwaarits/PharmaTrack',
-    image: '/img/cctv.png',
+    image: '/img/project-Pharmatrack.png',
     problemStatement: 'Pharmacies and clinics face medication stockouts, pharmaceutical batch expiration losses, and auditing challenges without a centralized real-time tracking system.',
     solutionContext: 'Developed PharmaTrack to provide live inventory level tracking, First-Expired First-Out (FEFO) dispensation suggestions, automated reorder thresholds, and strict role-based access control for pharmacy staff.',
     resultsMetrics: [
@@ -164,7 +164,7 @@ export const PROJECTS_DATA: Project[] = [
     type: 'dev',
     categoryLabel: 'FULL-STACK & FINTECH',
     url: 'https://github.com/mwaarits/KopdesGO',
-    image: '/img/galz.png',
+    image: '/img/project-Kopdesgo.png',
     problemStatement: 'Rural cooperatives often depend on manual, paper-based ledger recording, causing accounting errors, delayed loan disbursements, and lack of transparency for cooperative members.',
     solutionContext: 'Engineered KopdesGO to digitize member administration, voluntary and mandatory savings deposits, installment loan management with interest schedules, and instant financial balance sheet generation.',
     resultsMetrics: [
