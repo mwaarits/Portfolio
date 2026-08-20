@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'motion/react';
 import { PROJECTS_DATA } from '../data/portfolioData';
 import { Project } from '../types';
 import { ArrowUpRight, Eye, Github } from 'lucide-react';
@@ -98,9 +99,13 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, idx) => (
-            <article
+            <motion.article
               key={idx}
               onClick={() => onSelectProject(project)}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: idx * 0.08, ease: 'easeOut' }}
               className="bg-neutral-950/90 border border-white/10 hover:border-white/50 rounded-xl overflow-hidden flex flex-col justify-between group hover:bg-neutral-900/60 transition-all duration-300 shadow-lg relative cursor-pointer"
             >
               {/* Top Image Preview */}
@@ -181,7 +186,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   </div>
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

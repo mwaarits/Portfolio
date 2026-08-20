@@ -12,6 +12,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ProjectModal } from './components/ProjectModal';
 import { TerminalModal } from './components/TerminalModal';
+import { Reveal } from './components/Reveal';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -41,12 +42,12 @@ export default function App() {
       {/* Main Streamlined Sections: Hero -> Manifesto -> About -> Skills -> Projects -> Certifications -> Contact */}
       <main>
         <HeroSection />
-        <ManifestoSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection onSelectProject={(project) => setSelectedProject(project)} />
-        <CertsSection />
-        <ContactSection onOpenTerminal={() => setTerminalOpen(true)} />
+        <Reveal><ManifestoSection /></Reveal>
+        <Reveal delay={0.1}><AboutSection /></Reveal>
+        <Reveal delay={0.05}><SkillsSection /></Reveal>
+        <Reveal delay={0.1}><ProjectsSection onSelectProject={(project) => setSelectedProject(project)} /></Reveal>
+        <Reveal delay={0.1}><CertsSection /></Reveal>
+        <Reveal delay={0.1}><ContactSection onOpenTerminal={() => setTerminalOpen(true)} /></Reveal>
       </main>
 
       {/* Footer */}
