@@ -1,5 +1,8 @@
 import { Project, Certification, TargetMetric, SkillCategoryGroup } from '../types';
 
+export const categoryLabel = (project: Project): string =>
+  project.categoryLabel || project.type.toUpperCase();
+
 export const TYPEWRITER_ROLES = [
   'Cloud Infrastructure Engineer',
   'Cybersecurity & Network Defense',

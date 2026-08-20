@@ -1,28 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { useScroll, useMotionValueEvent } from 'motion/react';
 import { MANIFESTO_WORDS } from '../data/portfolioData';
 
 export const ManifestoSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start 0.8', 'end 0.4'],
+  });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // Calculate how far into the section we have scrolled
-      const progress = Math.max(
-        0,
-        Math.min(1, (windowHeight * 0.8 - rect.top) / (rect.height + windowHeight * 0.4))
-      );
-      setScrollProgress(progress);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useMotionValueEvent(scrollYProgress, 'change', (v) => setScrollProgress(v));
 
   return (
     <section

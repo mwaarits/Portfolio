@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { PROJECTS_DATA } from '../data/portfolioData';
+import { PROJECTS_DATA, categoryLabel } from '../data/portfolioData';
 import { Project } from '../types';
+import { ProjectImage } from './ProjectImage';
 import { ArrowUpRight, Eye, Github } from 'lucide-react';
 
 interface ProjectsSectionProps {
   onSelectProject: (project: Project) => void;
-  playClickSound?: () => void;
 }
 
-export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
-  onSelectProject,
-  playClickSound
-}) => {
-  const [filter, setFilter] = useState<'all' | 'cloud' | 'dev' | 'qa'>('all');
+export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProject }) => {
+  const [filter, setFilter] = useState<'all' | Project['type']>('all');
 
   const filteredProjects = PROJECTS_DATA.filter((p) => {
     if (filter === 'all') return true;
@@ -42,10 +39,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           {/* Filter Tabs */}
           <div className="flex flex-wrap items-center gap-2 bg-neutral-950 p-1.5 rounded-lg border border-white/15 font-mono text-xs">
             <button
-              onClick={() => {
-                setFilter('all');
-                playClickSound?.();
-              }}
+              onClick={() => setFilter('all')}
               className={`px-3.5 py-1.5 rounded transition-all duration-200 uppercase font-semibold ${
                 filter === 'all'
                   ? 'bg-white text-black font-bold shadow-[0_0_12px_rgba(255,255,255,0.4)]'
@@ -55,10 +49,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               ALL ({PROJECTS_DATA.length})
             </button>
             <button
-              onClick={() => {
-                setFilter('cloud');
-                playClickSound?.();
-              }}
+              onClick={() => setFilter('cloud')}
               className={`px-3.5 py-1.5 rounded transition-all duration-200 uppercase font-semibold ${
                 filter === 'cloud'
                   ? 'bg-white text-black font-bold shadow-[0_0_12px_rgba(255,255,255,0.4)]'
@@ -68,10 +59,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               CLOUD &amp; SECURITY ({cloudCount})
             </button>
             <button
-              onClick={() => {
-                setFilter('dev');
-                playClickSound?.();
-              }}
+              onClick={() => setFilter('dev')}
               className={`px-3.5 py-1.5 rounded transition-all duration-200 uppercase font-semibold ${
                 filter === 'dev'
                   ? 'bg-white text-black font-bold shadow-[0_0_12px_rgba(255,255,255,0.4)]'
@@ -81,10 +69,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               FULL-STACK ({devCount})
             </button>
             <button
-              onClick={() => {
-                setFilter('qa');
-                playClickSound?.();
-              }}
+              onClick={() => setFilter('qa')}
               className={`px-3.5 py-1.5 rounded transition-all duration-200 uppercase font-semibold ${
                 filter === 'qa'
                   ? 'bg-white text-black font-bold shadow-[0_0_12px_rgba(255,255,255,0.4)]'
@@ -110,19 +95,16 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             >
               {/* Top Image Preview */}
               <div className="relative aspect-video w-full overflow-hidden bg-neutral-900 border-b border-white/10">
-                <img
+                <ProjectImage
                   src={project.image}
                   alt={project.title}
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/img/helmet.png';
-                  }}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
                 
                 {/* Category Badge */}
                 <div className="absolute top-3 left-3">
                   <span className="px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider uppercase bg-black/85 text-white border border-white/20 backdrop-blur-md">
-                    {project.categoryLabel || project.type.toUpperCase()}
+                    {categoryLabel(project)}
                   </span>
                 </div>
               </div>

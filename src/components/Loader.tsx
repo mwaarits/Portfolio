@@ -27,7 +27,13 @@ export const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
       currentPct = Math.min(100, currentPct + increment);
       setPercent(Math.floor(currentPct));
 
-      const matchedStage = [...stages].reverse().find((s) => currentPct >= s.at);
+      let matchedStage: { at: number; label: string; sub: string } | undefined;
+      for (let i = stages.length - 1; i >= 0; i--) {
+        if (currentPct >= stages[i].at) {
+          matchedStage = stages[i];
+          break;
+        }
+      }
       if (matchedStage) {
         setLabel(matchedStage.label);
         setSub(matchedStage.sub);

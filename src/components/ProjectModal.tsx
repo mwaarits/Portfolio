@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Project } from '../types';
+import { categoryLabel } from '../data/portfolioData';
+import { ProjectImage } from './ProjectImage';
 import { X, ArrowUpRight, AlertCircle, Lightbulb, TrendingUp, BookOpen, Layers, Github } from 'lucide-react';
 
 interface ProjectModalProps {
@@ -46,7 +48,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           <div className="flex items-center gap-2.5">
             <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
             <span className="font-bold text-white uppercase tracking-wider">
-              PROJECT INTEL // {project.categoryLabel || project.type.toUpperCase()}
+              PROJECT INTEL // {categoryLabel(project)}
             </span>
           </div>
           <button
@@ -68,7 +70,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 {project.title}
               </h3>
               <span className="font-mono text-xs font-bold px-3 py-1 rounded bg-neutral-900 border border-white/20 text-neutral-300">
-                {project.categoryLabel || project.type.toUpperCase()}
+                {categoryLabel(project)}
               </span>
             </div>
 
@@ -78,12 +80,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
             {/* Project Image */}
             <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-black border border-white/15">
-              <img
+              <ProjectImage
                 src={project.image}
                 alt={project.title}
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/img/helmet.png';
-                }}
                 className="w-full h-full object-cover"
               />
             </div>

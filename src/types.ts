@@ -1,12 +1,13 @@
+export type ProjectType = 'cloud' | 'dev' | 'qa';
+
 export interface Project {
   title: string;
   desc: string;
   tags: string[];
-  type: string;
+  type: ProjectType;
   categoryLabel?: string;
   url: string;
   image: string;
-  wip?: boolean;
   problemStatement?: string;
   solutionContext?: string;
   resultsMetrics?: string[];

@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight, Download, GraduationCap } from 'lucide-react';
 import { TYPEWRITER_ROLES } from '../data/portfolioData';
 
-interface HeroSectionProps {
-  playClickSound?: () => void;
-}
-
-export const HeroSection: React.FC<HeroSectionProps> = ({ playClickSound }) => {
+export const HeroSection: React.FC = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -80,7 +76,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ playClickSound }) => {
         <div className="flex flex-wrap items-center gap-3.5">
           <a
             href="#projects"
-            onClick={playClickSound}
             className="px-6 py-3 bg-white hover:bg-neutral-200 text-black font-mono text-xs tracking-wider font-bold rounded flex items-center gap-2 transition-all duration-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] hover:scale-[1.02]"
           >
             <span>EXECUTE PROJECTS</span>
@@ -90,7 +85,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ playClickSound }) => {
           <a
             href="/assets/Mohammad-Waarits-Harahap-CV.pdf"
             download="Mohammad-Waarits-Harahap-CV.pdf"
-            onClick={playClickSound}
             className="px-6 py-3 bg-neutral-900/90 hover:bg-neutral-800 border border-white/20 hover:border-white text-white font-mono text-xs tracking-wider font-semibold rounded flex items-center gap-2 transition-all duration-200 hover:scale-[1.02]"
           >
             <span>DOWNLOAD CV</span>
