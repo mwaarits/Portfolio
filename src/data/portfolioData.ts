@@ -63,7 +63,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     title: 'Dark Network Mesh & Post-Quantum Cryptography VPN',
     desc: 'Decentralized WireGuard mesh network secured with Rosenpass post-quantum key exchange (ML-KEM-1024) across Azure cloud infrastructure, managed via agile Jira sprints.',
-    tags: ['Azure', 'WireGuard', 'Rosenpass', 'Post-Quantum Crypto', 'ML-KEM-1024', 'Jira'],
+    tags: ['Azure', 'WireGuard', 'Rosenpass', 'Post-Quantum Crypto', 'ML-KEM-1024', 'Jira', 'Prometheus & Grafana', 'fwknop'],
     type: 'cloud',
     categoryLabel: 'CLOUD & NETWORK SECURITY',
     url: 'https://github.com/mwaarits',
@@ -103,7 +103,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     title: 'Web3 Escrow Bug Bounty Platform',
     desc: 'Full-stack smart contract escrow platform built with React, Hono/Node, and viem, deployed to Azure App Service in a private VNet with automated GitHub Actions CI/CD.',
-    tags: ['Azure App Service', 'PostgreSQL', 'React', 'Hono', 'Viem', 'GitHub Actions', 'Azure DNS'],
+    tags: ['Azure App Service', 'PostgreSQL', 'React', 'Hono', 'Viem', 'GitHub Actions', 'Azure DNS', 'BOT Chain (EVM)'],
     type: 'dev',
     categoryLabel: 'FULL-STACK & CLOUD',
     url: 'https://github.com/mwaarits',
@@ -143,7 +143,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     title: 'PharmaTrack — Pharmacy & Inventory System',
     desc: 'Digital pharmacy supply chain and inventory management platform featuring real-time stock tracking, expiration alerts, supplier management, and secure dispensation audits.',
-    tags: ['JavaScript', 'React', 'Node.js', 'PostgreSQL', 'Docker', 'Inventory Management'],
+    tags: ['JavaScript', 'React', 'Node.js', 'PostgreSQL', 'Gemini', 'Inventory Management'],
     type: 'dev',
     categoryLabel: 'FULL-STACK & SYSTEMS',
     url: 'https://github.com/mwaarits/PharmaTrack',
@@ -163,7 +163,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     title: 'KopdesGO — Rural Cooperative Management Platform',
     desc: 'Comprehensive cooperative (Koperasi Desa) administration platform providing digitized double-entry ledgers, member savings/loan tracking, and automated financial auditing.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'RBAC', 'Financial Ledger', 'Docker'],
+    tags: ['React', 'Node.js', 'PostgreSQL', 'RBAC', 'Financial Ledger', 'Gemini'],
     type: 'dev',
     categoryLabel: 'FULL-STACK & FINTECH',
     url: 'https://github.com/mwaarits/KopdesGO',
