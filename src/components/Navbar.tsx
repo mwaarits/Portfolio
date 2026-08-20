@@ -50,13 +50,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
           onClick={(e) => handleNavClick(e, '#home')}
           className="flex items-center gap-2.5 text-white group cursor-pointer"
         >
-          <div className="w-8 h-8 rounded bg-neutral-900 border border-white/20 flex items-center justify-center overflow-hidden p-1 transition-transform group-hover:scale-105 group-hover:border-white">
-            <img
-              src="/img/helmet.png"
-              alt="Helmet Logo"
-              className="w-full h-full object-contain filter grayscale contrast-125 brightness-125"
-            />
-          </div>
           <div className="flex flex-col">
             <span className="font-display tracking-widest text-lg font-bold leading-none text-white glitch-hover" data-text="MWAARITS">
               MWAARITS

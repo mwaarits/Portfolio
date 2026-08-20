@@ -83,11 +83,12 @@ export const HeroSection: React.FC = () => {
           </a>
 
           <a
-            href="/assets/Mohammad-Waarits-Harahap-CV.pdf"
-            download="Mohammad-Waarits-Harahap-CV.pdf"
+            href="/assets/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-3 bg-neutral-900/90 hover:bg-neutral-800 border border-white/20 hover:border-white text-white font-mono text-xs tracking-wider font-semibold rounded flex items-center gap-2 transition-all duration-200 hover:scale-[1.02]"
           >
-            <span>DOWNLOAD CV</span>
+            <span>View my Resume</span>
             <Download className="w-4 h-4 text-neutral-300" />
           </a>
         </div>
