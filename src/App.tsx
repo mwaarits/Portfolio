@@ -42,7 +42,7 @@ export default function App() {
       {/* Main Streamlined Sections: Hero -> Manifesto -> About -> Skills -> Projects -> Certifications -> Contact */}
       <main>
         <HeroSection />
-        <Reveal><ManifestoSection /></Reveal>
+        <ManifestoSection />
         <Reveal delay={0.1}><AboutSection /></Reveal>
         <Reveal delay={0.05}><SkillsSection /></Reveal>
         <Reveal delay={0.1}><ProjectsSection onSelectProject={(project) => setSelectedProject(project)} /></Reveal>
