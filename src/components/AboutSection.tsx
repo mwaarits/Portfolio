@@ -30,13 +30,10 @@ export const AboutSection: React.FC = () => {
 
           <div className="space-y-6 text-neutral-300 font-body text-base sm:text-xl leading-relaxed border-l-2 border-white/20 pl-6 sm:pl-8">
             <p>
-              I am an undergraduate student pursuing a <b className="text-white font-semibold">Bachelor of Information Technology</b> at <b className="text-white font-semibold">President University</b> (Batch 2024).
+              <b className="text-white font-semibold">Information Technology student at President University</b> (Batch 2024) with solid grounding in <b className="text-white font-semibold">system analysis, software development, network security, and cloud infrastructure</b>.
             </p>
             <p>
-              Driven by a genuine enthusiasm for computing and systems architecture, my primary technical focus centers around <b className="text-white font-semibold">cloud computing</b> and <b className="text-white font-semibold">cybersecurity</b>. I explore how scalable cloud infrastructures are deployed, monitored, and resiliently defended against modern security threats.
-            </p>
-            <p>
-              My approach blends continuous practical lab research, infrastructure engineering, and defensive analysis: dissecting complex systems, evaluating vulnerabilities, and constructing reliable defensive controls.
+              Experienced in turning business needs into <b className="text-white font-semibold">system designs, workflows, and documentation</b>, with hands-on testing using <b className="text-white font-semibold">Cypress & Postman</b>. Familiar with <b className="text-white font-semibold">SDLC, web apps, and cybersecurity</b>, and used to leading team projects with a focus on collaboration and problem-solving.
             </p>
           </div>
 
