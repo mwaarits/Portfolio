@@ -62,123 +62,57 @@ export const SKILL_GROUPS: SkillCategoryGroup[] = [
 export const PROJECTS_DATA: Project[] = [
   {
     title: 'Dark Network Mesh & Post-Quantum Cryptography VPN',
-    desc: 'Decentralized WireGuard mesh network secured with Rosenpass post-quantum key exchange (ML-KEM-1024) across Azure cloud infrastructure, managed via agile Jira sprints.',
-    tags: ['Azure', 'WireGuard', 'Rosenpass', 'Post-Quantum Crypto', 'ML-KEM-1024', 'Jira', 'Prometheus & Grafana', 'fwknop'],
+    desc: 'Multi-layer VPN security system for a simulated B2B FinTech inter-bank network. Combines fwknop dark network, WireGuard mesh tunnels, and Rosenpass ML-KEM-1024 key rotation to protect transaction traffic from current threats and future quantum attacks, with a React monitoring dashboard.',
+    tags: ['Azure', 'WireGuard', 'Rosenpass', 'Post-Quantum Crypto', 'ML-KEM-1024', 'fwknop', 'Prometheus & Grafana', 'React'],
     type: 'cloud',
     categoryLabel: 'CLOUD & NETWORK SECURITY',
-    url: 'https://github.com/mwaarits',
-    image: '/img/project-PQC.png',
-    problemStatement: 'Conventional public-key exchange algorithms (such as Diffie-Hellman and standard RSA) are vulnerable to future quantum computing decryption ("Harvest Now, Decrypt Later" threats) and lack decentralized mesh resilience.',
-    solutionContext: 'Led a 5-person team across 2 sprints in Jira to architect and deploy a robust VPN mesh network. Administered Azure VPS instances with strict network security rules and configured WireGuard tunnels integrated with Rosenpass post-quantum key exchange (ML-KEM-1024).',
-    resultsMetrics: [
-      'Delivered a fully verified system meeting 100% of mandatory requirements confirmed via live connectivity and network scan testing.',
-      'Completed 2 full agile sprints in Jira with zero missed delivery deadlines through proactive dependency management.',
-      'Achieved quantum-resilient cryptographic key negotiation with automated tunnel rekeying in sub-second latency.'
-    ],
-    lessonsLearned: [
-      'Kernel-level WireGuard tunnels paired with user-space post-quantum daemons like Rosenpass provide exceptional security without noticeable throughput degradation.',
-      'Structured backlog refinement and sprint velocity tracking in Jira are critical when coordinating multi-node infrastructure configurations across a team.'
-    ]
+    url: 'https://github.com/mwaarits/PQC-VPN',
+    image: '/img/project-PQC.png'
   },
   {
     title: 'Retrieval Augmented Generation (RAG) Web App',
-    desc: 'Enterprise RAG document Q&A application with Gemini embeddings, ChromaDB, and hybrid BM25 vector search, provisioned on Azure Container Apps via Terraform with automated CI/CD.',
-    tags: ['Azure Container Apps', 'Terraform', 'Gemini AI', 'ChromaDB', 'Docker', 'GitHub Actions', 'RBAC'],
+    desc: 'Local RAG Q&A app: upload PDF/TXT/MD documents, chunk and embed with Gemini, store in ChromaDB, then ask questions with hybrid BM25 + vector search. Features per-user data isolation, auth, and grounded answers with source citations.',
+    tags: ['Python', 'Gemini AI', 'ChromaDB', 'Docker', 'FastAPI', 'Azure Container Apps', 'Terraform', 'GitHub Actions'],
     type: 'cloud',
     categoryLabel: 'CLOUD & AI PLATFORM',
-    url: 'https://github.com/mwaarits',
-    image: '/img/project-RAG.png',
-    problemStatement: 'Knowledge-base document query applications often suffer from LLM hallucinations, poor data retrieval precision, and insecure cloud deployments lacking multi-tenant data isolation.',
-    solutionContext: 'Engineered a full-stack RAG document Q&A app leveraging Gemini embeddings, ChromaDB, and hybrid BM25 vector search with strict per-user data isolation. Containerized with Dockerfile using a non-root runtime user and provisioned Azure Container Apps, private VNet, and Azure Files via Terraform.',
-    resultsMetrics: [
-      'Enforced least-privilege security via Azure Managed Identity and role-based access control (AcrPull, Key Vault Secrets User).',
-      'Automated container builds to Azure Container Registry (ACR) via GitHub Actions CI/CD on every push to main.',
-      'Achieved persistent vector database storage on Azure Files with zero vector data loss across container restarts.'
-    ],
-    lessonsLearned: [
-      'Hybrid keyword (BM25) and dense vector retrieval significantly out-performs pure vector search for domain-specific technical documentation.',
-      'Declarative Infrastructure as Code (Terraform) coupled with non-root Docker execution ensures reproducible and secure cloud workloads.'
-    ]
+    url: 'https://github.com/mwaarits/Retrieval-Augmented-Generation',
+    image: '/img/project-RAG.png'
   },
   {
     title: 'Web3 Escrow Bug Bounty Platform',
-    desc: 'Full-stack smart contract escrow platform built with React, Hono/Node, and viem, deployed to Azure App Service in a private VNet with automated GitHub Actions CI/CD.',
-    tags: ['Azure App Service', 'PostgreSQL', 'React', 'Hono', 'Viem', 'GitHub Actions', 'Azure DNS', 'BOT Chain (EVM)'],
+    desc: 'On-chain bug bounty platform on BOT Chain (EVM) connecting builders with security researchers via smart contract escrow. Bounties are funded in escrow, reports are hash-committed on-chain, then paid out or refunded with admin dispute resolution and full audit trail.',
+    tags: ['Solidity', 'React', 'Hono', 'Viem', 'PostgreSQL', 'Azure App Service', 'GitHub Actions', 'BOT Chain (EVM)'],
     type: 'dev',
     categoryLabel: 'FULL-STACK & CLOUD',
-    url: 'https://github.com/mwaarits',
-    image: '/img/project-Bugchain.png',
-    problemStatement: 'Security bounty programs require transparent, decentralized escrow handling combined with a secure, highly responsive cloud infrastructure for indexing on-chain bounty events.',
-    solutionContext: 'Built and deployed a full-stack escrow platform (Hono/Node, React, viem) to Azure App Service with GitHub Actions CI/CD, indexing on-chain bounty events in real time. Provisioned Azure App Service and managed PostgreSQL in a private VNet with Key Vault-backed secrets and custom Azure DNS with TLS certificates.',
-    resultsMetrics: [
-      'Real-time on-chain event indexing for instant wallet-connected user notifications and bounty status tracking.',
-      'Secured backend communication in a private VNet with Key Vault secrets and HTTPS-only enforcement.',
-      'Automated seamless zero-downtime deployment pipelines using GitHub Actions.'
-    ],
-    lessonsLearned: [
-      'VNet isolation combined with Managed Identity and Key Vault eliminates raw secret exposures in production application logs.',
-      'Lightweight Node runtimes like Hono drastically reduce serverless cold-start delays compared to heavier legacy web frameworks.'
-    ]
+    url: 'https://github.com/mwaarits/BugChain',
+    image: '/img/project-Bugchain.png'
   },
   {
     title: 'QA Automation & Testing Framework Portfolio',
-    desc: 'Automated software quality assurance portfolio featuring End-to-End (E2E) testing with Cypress, automated API validation with Postman, load testing via JMeter, and Jira test management.',
-    tags: ['Cypress', 'Postman', 'JMeter', 'Jira', 'ClickUp', 'API Testing', 'E2E Automation'],
+    desc: 'Comprehensive QA portfolio on PharmaTrack, a pharmacy e-commerce and Mini POS app. Covers 74 manual black-box cases, 47 Cypress E2E automations, Postman API validation, and JMeter load testing with full test reports.',
+    tags: ['Cypress', 'Postman', 'JMeter', 'Manual Testing', 'API Testing', 'E2E Automation'],
     type: 'qa',
     categoryLabel: 'QA & TEST AUTOMATION',
     url: 'https://github.com/mwaarits/QA-Portofolio',
-    image: '/img/project-QA-Portfolio.png',
-    problemStatement: 'Manual regression testing across complex web applications leads to deployment delays, untracked edge-case defects, and unverified API endpoint performance under load.',
-    solutionContext: 'Constructed a comprehensive testing suite combining Cypress for automated end-to-end browser journeys, Postman test scripts automated via Newman CLI for REST API validation, and JMeter test suites for concurrency and performance benchmarking.',
-    resultsMetrics: [
-      'Engineered automated test coverage across critical user flows and authentication workflows.',
-      'Configured CI-ready Newman API test execution validating status codes, response schemas, and payloads.',
-      'Simulated concurrent user traffic in JMeter to benchmark backend throughput and latency under stress.'
-    ],
-    lessonsLearned: [
-      'Automating regression suites early prevents release bottlenecks and ensures rapid defect discovery in agile development cycles.',
-      'Decoupling test data fixtures and mocking third-party dependencies eliminates flaky test results.'
-    ]
+    image: '/img/project-QA-Portfolio.png'
   },
   {
     title: 'PharmaTrack — Pharmacy & Inventory System',
-    desc: 'Digital pharmacy supply chain and inventory management platform featuring real-time stock tracking, expiration alerts, supplier management, and secure dispensation audits.',
-    tags: ['JavaScript', 'React', 'Node.js', 'PostgreSQL', 'Gemini', 'Inventory Management'],
+    desc: 'Modern hybrid pharmacy e-commerce and Mini POS platform for digital pharmacies. Provides product catalog and checkout, automated inventory alerts, AI-powered health consultation, and streamlined sales tracking.',
+    tags: ['Next.js', 'TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Prisma', 'Gemini'],
     type: 'dev',
     categoryLabel: 'FULL-STACK & SYSTEMS',
     url: 'https://github.com/mwaarits/PharmaTrack',
-    image: '/img/project-Pharmatrack.png',
-    problemStatement: 'Pharmacies and clinics face medication stockouts, pharmaceutical batch expiration losses, and auditing challenges without a centralized real-time tracking system.',
-    solutionContext: 'Developed PharmaTrack to provide live inventory level tracking, First-Expired First-Out (FEFO) dispensation suggestions, automated reorder thresholds, and strict role-based access control for pharmacy staff.',
-    resultsMetrics: [
-      'Automated batch expiration tracking to prevent distribution of expired pharmaceuticals.',
-      'Complete transaction audit trails for all medicine intake, stock adjustments, and customer dispensations.',
-      'High-performance searchable drug catalog with SKU and barcode lookup capabilities.'
-    ],
-    lessonsLearned: [
-      'Database transaction integrity and ACID guarantees are paramount to prevent stock discrepancies during simultaneous purchases.',
-      'Designing streamlined, high-contrast dashboards minimizes input errors during rapid point-of-sale operations.'
-    ]
+    image: '/img/project-Pharmatrack.png'
   },
   {
     title: 'KopdesGO — Rural Cooperative Management Platform',
-    desc: 'Comprehensive cooperative (Koperasi Desa) administration platform providing digitized double-entry ledgers, member savings/loan tracking, and automated financial auditing.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'RBAC', 'Financial Ledger', 'Gemini'],
+    desc: 'Digital Koperasi Desa platform for member transparency and participation. Provides member dashboard, village job listings, e-voting, cooperative financial transparency, and a Gemini-powered WhatsApp assistant via Fonnte and Supabase Edge Functions.',
+    tags: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Gemini 2.5 Flash', 'Fonnte', 'Tailwind CSS'],
     type: 'dev',
     categoryLabel: 'FULL-STACK & FINTECH',
     url: 'https://github.com/mwaarits/KopdesGO',
-    image: '/img/project-Kopdesgo.png',
-    problemStatement: 'Rural cooperatives often depend on manual, paper-based ledger recording, causing accounting errors, delayed loan disbursements, and lack of transparency for cooperative members.',
-    solutionContext: 'Engineered KopdesGO to digitize member administration, voluntary and mandatory savings deposits, installment loan management with interest schedules, and instant financial balance sheet generation.',
-    resultsMetrics: [
-      'Automated calculation and tracking of savings balances, loan installments, and dividend distributions.',
-      'Multi-tier role access for cooperative managers, tellers, and village cooperative members.',
-      'Generated transparent, audit-ready financial summaries for cooperative meetings.'
-    ],
-    lessonsLearned: [
-      'Financial applications require precise numeric representation and immutable ledger audit records at the data layer.',
-      'User interfaces for community tools must be lightweight, responsive, and intuitive for users of all technical proficiencies.'
-    ]
+    image: '/img/project-Kopdesgo.png'
   }
 ];
 

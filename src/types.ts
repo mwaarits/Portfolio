@@ -8,10 +8,6 @@ export interface Project {
   categoryLabel?: string;
   url: string;
   image: string;
-  problemStatement?: string;
-  solutionContext?: string;
-  resultsMetrics?: string[];
-  lessonsLearned?: string[];
 }
 
 export interface Certification {

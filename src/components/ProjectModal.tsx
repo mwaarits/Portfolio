@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Project } from '../types';
 import { categoryLabel } from '../data/portfolioData';
 import { ProjectImage } from './ProjectImage';
-import { X, ArrowUpRight, AlertCircle, Lightbulb, TrendingUp, BookOpen, Layers, Github } from 'lucide-react';
+import { X, ArrowUpRight, Layers, Github } from 'lucide-react';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -48,7 +48,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           <div className="flex items-center gap-2.5">
             <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
             <span className="font-bold text-white uppercase tracking-wider">
-              PROJECT INTEL // {categoryLabel(project)}
+              PROJECT // {categoryLabel(project)}
             </span>
           </div>
           <button
@@ -88,80 +88,11 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             </div>
           </div>
 
-          {/* Deep-Dive Grid: Problem Statement & Solution */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* 1. Problem Statement */}
-            <div className="p-5 bg-neutral-900/80 border border-white/10 rounded-xl space-y-2.5">
-              <div className="flex items-center gap-2 text-white font-mono text-xs font-bold tracking-wider uppercase">
-                <AlertCircle className="w-4 h-4 text-white" />
-                <span>PROBLEM STATEMENT</span>
-              </div>
-              <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-body">
-                {project.problemStatement || 'Identified architectural requirements and operational challenges addressed through structured engineering.'}
-              </p>
-            </div>
-
-            {/* 2. Solution & User Context */}
-            <div className="p-5 bg-neutral-900/80 border border-white/10 rounded-xl space-y-2.5">
-              <div className="flex items-center gap-2 text-white font-mono text-xs font-bold tracking-wider uppercase">
-                <Lightbulb className="w-4 h-4 text-white" />
-                <span>SOLUTION &amp; USER CONTEXT</span>
-              </div>
-              <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-body">
-                {project.solutionContext || 'Constructed resilient cloud architectures, automated workflows, and robust validation pipelines.'}
-              </p>
-            </div>
-          </div>
-
-          {/* 3. Results / Metrics */}
-          <div className="p-5 bg-neutral-900/80 border border-white/10 rounded-xl space-y-3">
-            <div className="flex items-center gap-2 text-white font-mono text-xs font-bold tracking-wider uppercase">
-              <TrendingUp className="w-4 h-4 text-white" />
-              <span>RESULTS &amp; METRICS</span>
-            </div>
-            {project.resultsMetrics && project.resultsMetrics.length > 0 ? (
-              <ul className="space-y-2">
-                {project.resultsMetrics.map((metric, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-neutral-300 font-body">
-                    <span className="text-white font-mono font-bold mt-0.5">▪</span>
-                    <span>{metric}</span>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-xs sm:text-sm text-neutral-300">
-                Validated in production and staging environments with reliable test metrics and uptime.
-              </p>
-            )}
-          </div>
-
-          {/* 4. Lessons Learned */}
-          <div className="p-5 bg-neutral-900/80 border border-white/10 rounded-xl space-y-3">
-            <div className="flex items-center gap-2 text-white font-mono text-xs font-bold tracking-wider uppercase">
-              <BookOpen className="w-4 h-4 text-white" />
-              <span>LESSONS LEARNED</span>
-            </div>
-            {project.lessonsLearned && project.lessonsLearned.length > 0 ? (
-              <ul className="space-y-2">
-                {project.lessonsLearned.map((lesson, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-neutral-300 font-body">
-                    <span className="text-white font-mono font-bold mt-0.5">✓</span>
-                    <span>{lesson}</span>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-xs sm:text-sm text-neutral-300">
-                Demonstrated that proactive security engineering, automated CI/CD pipelines, and rigorous validation guarantee system reliability.
-              </p>
-            )}
-          </div>
-
           {/* Applied Technologies & Tags */}
           <div>
             <div className="font-mono text-xs text-neutral-400 uppercase tracking-wider mb-2.5 flex items-center gap-2">
               <Layers className="w-3.5 h-3.5 text-white" />
-              <span>APPLIED STACK &amp; METHODOLOGY</span>
+              <span>TECH STACK</span>
             </div>
             <div className="flex flex-wrap gap-2 font-mono text-xs">
               {project.tags.map((tag, idx) => (

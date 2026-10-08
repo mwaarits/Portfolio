@@ -134,19 +134,11 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
                     ))}
                   </div>
 
-                  {/* Actions: Details Modal & Direct Repo Link */}
+                  {/* Actions: Direct Repo Link */}
                   <div className="pt-3 border-t border-white/10 flex items-center justify-between font-mono text-xs">
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onSelectProject(project);
-                      }}
-                      className="text-neutral-300 hover:text-white flex items-center gap-1.5 py-1 px-3 rounded bg-neutral-900 border border-white/15 hover:border-white transition-colors"
-                    >
-                      <Eye className="w-3.5 h-3.5" />
-                      <span>INTEL &amp; SPECS</span>
-                    </button>
+                    <span className="text-neutral-500 text-[11px] uppercase tracking-wider">
+                      Click card for details
+                    </span>
 
                     {project.url && project.url !== '#' ? (
                       <a
