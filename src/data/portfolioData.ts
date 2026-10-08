@@ -121,7 +121,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     name: 'Machine Learning Basics for Beginners',
     issuer: 'Dicoding',
-    year: '2026',
+    year: '2024',
     merit: true,
     link: 'https://www.dicoding.com/certificates/JMZV3E2YRPN9',
     type: 'foundation'
@@ -129,7 +129,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     name: 'Getting Started with Python Programming',
     issuer: 'Dicoding',
-    year: '2026',
+    year: '2024',
     merit: true,
     link: 'https://www.dicoding.com/certificates/NVP7QL8MOZR0',
     type: 'foundation'
@@ -137,7 +137,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     name: 'Learn JavaScript Programming Basics',
     issuer: 'Dicoding',
-    year: '2026',
+    year: '2025',
     merit: true,
     link: 'https://www.dicoding.com/certificates/81P2L1M2JZOY',
     type: 'foundation'
@@ -153,7 +153,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     name: 'Cyber Security Course — Level Basic',
     issuer: 'ITBOX',
-    year: '2025',
+    year: '2023',
     merit: true,
     link: 'https://itbox.id/certificate-verifier/1330E7D25-1333BAAC8-33F893D/',
     type: 'defense'
@@ -161,7 +161,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     name: 'Cyber Security Course — Level Intermediate',
     issuer: 'ITBOX',
-    year: '2025',
+    year: '2023',
     merit: true,
     link: 'https://itbox.id/certificate-verifier/1330E7D25-1332C4172-33F893D/',
     type: 'defense'

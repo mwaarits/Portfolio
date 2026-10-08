@@ -78,12 +78,6 @@ export const SkillsSection: React.FC = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Bottom Subtle Indicator */}
-              <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-neutral-500">
-                <span>VERIFIED PROFICIENCY</span>
-                <span className="text-white font-bold">✓</span>
-              </div>
             </div>
           ))}
         </div>
