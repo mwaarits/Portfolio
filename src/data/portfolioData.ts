@@ -88,13 +88,14 @@ export const PROJECTS_DATA: Project[] = [
     image: '/img/project-Bugchain.png'
   },
   {
-    title: 'QA Automation & Testing Framework Portfolio',
-    desc: 'Comprehensive QA portfolio on PharmaTrack, a pharmacy e-commerce and Mini POS app. Covers 74 manual black-box cases, 47 Cypress E2E automations, Postman API validation, and JMeter load testing with full test reports.',
-    tags: ['Cypress', 'Postman', 'JMeter', 'Manual Testing', 'API Testing', 'E2E Automation'],
+    title: 'Quality Assurance Portfolio',
+    desc: 'Comprehensive QA portfolio covering manual and automation testing — from test plans and test cases to execution reports — plus API testing using tools such as Cypress, Katalon Studio, and Postman.',
+    tags: ['Cypress', 'Katalon Studio', 'Postman', 'JMeter', 'Manual Testing', 'API Testing'],
     type: 'qa',
     categoryLabel: 'QA & TEST AUTOMATION',
-    url: 'https://github.com/mwaarits/QA-Portofolio',
-    image: '/img/project-QA-Portfolio.png'
+    url: 'https://www.mentorqa.com/portfolio/mohammad-waarits-harahap',
+    image: '/img/project-QA-Portfolio.png',
+    linkLabel: 'VIEW PORTFOLIO'
   },
   {
     title: 'PharmaTrack — Pharmacy & Inventory System',

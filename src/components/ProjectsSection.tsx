@@ -148,9 +148,13 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onSelectProjec
                         onClick={(e) => e.stopPropagation()}
                         className="flex items-center gap-1.5 py-1 px-3 rounded bg-white text-black font-semibold hover:bg-neutral-200 transition-colors"
                       >
-                        <Github className="w-3.5 h-3.5" />
-                        <span>REPO</span>
-                        <ArrowUpRight className="w-3 h-3" />
+                        {project.linkLabel ? (
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        ) : (
+                          <Github className="w-3.5 h-3.5" />
+                        )}
+                        <span>{project.linkLabel === 'VIEW PORTFOLIO' ? 'PORTFOLIO' : 'REPO'}</span>
+                        {!project.linkLabel && <ArrowUpRight className="w-3 h-3" />}
                       </a>
                     ) : (
                       <span className="text-neutral-600 text-[11px] uppercase">

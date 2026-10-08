@@ -123,9 +123,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               rel="noopener noreferrer"
               className="px-5 py-2.5 rounded-lg bg-white text-black font-bold hover:bg-neutral-200 flex items-center gap-2 transition-transform hover:scale-[1.02] shadow-[0_0_15px_rgba(255,255,255,0.3)]"
             >
-              <Github className="w-4 h-4" />
-              <span>VIEW ON GITHUB</span>
-              <ArrowUpRight className="w-4 h-4" />
+              {project.linkLabel ? (
+                <ArrowUpRight className="w-4 h-4" />
+              ) : (
+                <Github className="w-4 h-4" />
+              )}
+              <span>{project.linkLabel ?? 'VIEW ON GITHUB'}</span>
+              {!project.linkLabel && <ArrowUpRight className="w-4 h-4" />}
             </a>
           ) : (
             <span className="text-neutral-500 text-xs font-mono">DOCUMENTATION INTERNAL</span>

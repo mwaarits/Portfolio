@@ -8,6 +8,7 @@ export interface Project {
   categoryLabel?: string;
   url: string;
   image: string;
+  linkLabel?: string;
 }
 
 export interface Certification {
